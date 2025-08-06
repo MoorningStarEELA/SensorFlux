@@ -1,5 +1,5 @@
 :root {
-    --primary: #3864b5;
+    --primary: #092f74;
     --primary-light: #4d81c5;
     --secondary: #42c1c7;
     --accent: #90ffff;
@@ -31,7 +31,7 @@ body {
 }
 
 .container {
-    background: rgba(26, 26, 46, 0.92);
+    background: rgba(255, 255, 255, 0.062);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: var(--shadow);

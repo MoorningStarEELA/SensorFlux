@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/base.css">
+    <link rel="stylesheet" href="./style/resultados.css">
+    <link rel="icon" href="./style/sources/legumbres.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container export-pdf">
+    <div class="logo-fallback"></div>
+    </div>
+        
+        <div class="header">
+            <h1 class="title">Monitoreo del Flux - Wave Solder</h1>
+        </div>
+        
+        <div class="content">
+            
+            <p class="message">Visualización a tiempo real</p>
+            
+            <div class="chart-container">
+                <canvas id="grafica"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table class="results-table">
+                    <thead>
+                        <tr>
+                            <th>Datos</th>
+                            <th>Resultados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Minutos por cambio de Modelo al día</td>
+                            <td id="ResultadoModelo">-</td>
+                        </tr>
+                        <tr>
+                            <td>Eficiencia</td>
+                            <td id="ResultadoProductividad">-</td>
+                        </tr>
+                        <tr>
+                            <td>Minutos NPI</td>
+                            <td id="ResultadoNPI">-</td>
+                        </tr>
+                        <tr>
+                            <td>YIELD</td>
+                            <td id="ResultadoYield">-</td>
+                        </tr>
+                        <tr>
+                            <td>OEE</td>
+                            <td id="ResultadoOEE">-</td>
+                        </tr>
+                        <tr>
+                            <td>Máquinas Necesarias</td>
+                            <td id="ResultadoMaquinas">-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="actions">
+                <button class="btn btn-primary" id="generarPDF">
+                    <i class="fas fa-download"></i> Descargar Reporte
+                </button>
+                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Smart Capacity Calculator &copy; 2025</p>
+        </div>
+    </div>
+
+    <script src="./script/db.js"></script>
+    <script src="./script/resultados.js"></script>
+</body>
+</html>
